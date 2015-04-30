@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		Name 
+		<input id="name" type="text" /><br/>
+		Age 
+		<input id="age" type="text" /><br/>
+		Gender
+		<input id="gender" type="text" /><br/>
+		<input id="myButton" type="button" value="Submit"/>
+
+		<table border='1'>
+		  <tr>
+		    <td>Name</td>
+		    <td>Age</td>
+		    <td>Gender</td>
+		  </tr>
+		</table>		
+
+
+		<script>
+			$("#myButton").click(function(){
+				var name = $("#name").val();
+				var age = $("#age").val();
+				var gender = $("#gender").val();
+
+				alert(name + "("+gender+") is " + age + " years old");
+
+
+				$("table").append("<tr></tr>");
+				$("table tr:last").append("<td>"+name+"</td>");
+				$("table tr:last").append("<td>"+age+"</td>");
+				$("table tr:last").append("<td>"+gender+"</td>");
+			});
+		</script>
+
+	</body>
+</html>
